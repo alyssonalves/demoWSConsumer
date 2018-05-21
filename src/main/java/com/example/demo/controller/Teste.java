@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.util.List;
 
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entity.Endereco;
+import com.example.demo.repository.InterfaceViaCEPClient;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
@@ -20,7 +22,7 @@ import com.google.gson.Gson;
 public class Teste {
 	
 	@Autowired
-	private ViaCEPClient cliente;
+	private InterfaceViaCEPClient cliente;
 	
 	
 	@GetMapping("/cossulta/{cep}")
